@@ -9,8 +9,8 @@ headers = {
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     # 填入cookie
     'Cookie': '',
-    'Host': 'public.ecustpt.eu.org',
-    'Origin': 'public.ecustpt.eu.org',
+    'Host': 'hudbt.hust.edu.cn',
+    'Origin': 'hudbt.hust.edu.cn',
     'Sec-Ch-Ua': '"Not A(Brand";v="99", "Microsoft Edge";v="121", "Chromium";v="121"',
     'Sec-Ch-Ua-Mobile': '?0',
     'Sec-Ch-Ua-Platform': '"Windows"',
@@ -26,7 +26,7 @@ data = {'id': ''}  # 初始化数据字典，键为'id'
 # 遍历ID范围
 for i in range(4737, 4700, -1):  # 从4737递减到4701（包括4701）
     data['id'] = str(i)  # 更新'id'值
-    response = requests.post('https://public.ecustpt.eu.org/thanks.php', headers=headers, data=data)
+    response = requests.post('https://hudbt.hust.edu.cn/thanks.php', headers=headers, data=data)
 
     # 检查响应状态码，确保请求成功
     if response.status_code == 200:

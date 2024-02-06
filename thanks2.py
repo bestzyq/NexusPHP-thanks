@@ -9,8 +9,8 @@ headers = {
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     # 填入cookie
     'Cookie': '',
-    'Host': 'public.ecustpt.eu.org',
-    'Origin': 'public.ecustpt.eu.org',
+    'Host': 'hudbt.hust.edu.cn',
+    'Origin': 'hudbt.hust.edu.cn',
     'Sec-Ch-Ua': '"Not A(Brand";v="99", "Microsoft Edge";v="121", "Chromium";v="121"',
     'Sec-Ch-Ua-Mobile': '?0',
     'Sec-Ch-Ua-Platform': '"Windows"',
@@ -34,7 +34,7 @@ async def main():
         tasks = []
         for i in range(start_value, end_value - 1, -1):  # 注意：range不包含结束值，所以这里是end_value - 1
             data = {'id': str(i)}
-            task = asyncio.ensure_future(send_post_request(session, 'https://public.ecustpt.eu.org/thanks.php', data))
+            task = asyncio.ensure_future(send_post_request(session, 'https://hudbt.hust.edu.cn/thanks.php', data))
             tasks.append(task)
 
         responses = await asyncio.gather(*tasks)
